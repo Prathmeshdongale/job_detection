@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f0f4ff;
+  color: #1e293b;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #e8eeff; border-radius: 99px; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #6366f1, #8b5cf6); border-radius: 99px; }
+
+input, textarea, select {
+  font-family: inherit;
+  background: #ffffff !important;
+  border: 2px solid #c7d2fe !important;
+  color: #1e293b !important;
+  border-radius: 10px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+input:focus, textarea:focus, select:focus {
+  outline: none !important;
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.2) !important;
+}
+input::placeholder, textarea::placeholder { color: #94a3b8 !important; }
+select option { background: #fff; color: #1e293b; }
+
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes shimmer { 0%,100% { opacity: 0.6; } 50% { opacity: 1; } }
+.fade-in { animation: fadeIn 0.3s ease forwards; }
+.shimmer { animation: shimmer 1.5s ease-in-out infinite; }
